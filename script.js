@@ -12,12 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeIcon = document.querySelector('.theme-icon');
     const body = document.body;
     
-    // Check for saved theme preference or default to dark mode
-    const currentTheme = localStorage.getItem('theme') || 'dark';
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
     
     if (currentTheme === 'light') {
         body.classList.add('light-mode');
         themeIcon.textContent = '☀️';
+    } else {
+        themeIcon.textContent = '🌙';
     }
     
     // Theme toggle click handler
@@ -103,20 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ================================
-    // Navbar Background on Scroll
+    // Navbar Background on Scroll - REMOVED
+    // Navigation stays consistent in light/dark mode
     // ================================
-    
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(26, 26, 46, 0.98)';
-            navbar.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.7)';
-        } else {
-            navbar.style.background = 'rgba(26, 26, 46, 0.95)';
-            navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.5)';
-        }
-    });
     
     // ================================
     // Animate Elements on Scroll
