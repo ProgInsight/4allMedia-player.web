@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4allMedia Player - Features Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🎵 4allMedia <span class="highlight">Player</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="documentation.html" class="active">Features</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="docs-container">
+        <aside class="sidebar">
+            <h3>Features</h3>
+            <ul class="docs-nav">
+                <li><a href="#ai-assistant" class="nav-item active">AI Assistant</a></li>
+                <li><a href="#backend-support">Backend Support</a></li>
+                <li><a href="#file-navigation">File Navigation</a></li>
+                <li><a href="#playlist">Playlist Management</a></li>
+                <li><a href="#lyrics">Lyrics Support</a></li>
+                <li><a href="#playback-controls">Playback Controls</a></li>
+                <li><a href="#customization">Appearance & Customization</a></li>
+            </ul>
+        </aside>
+
+        <main class="docs-content">
+            <section id="ai-assistant" class="doc-section active">
+                <h2>🤖 AI Assistant</h2>
+                <div class="feature-detail">
+                    <p>Experience hands-free media control with our intelligent AI assistant. Interact naturally using voice commands or gestures.</p>
+                    
+                    <h3>Voice Control</h3>
+                    <p>Simply speak to control your media:</p>
+                    <ul>
+                        <li>"Play my favorite playlist"</li>
+                        <li>"Find subtitles for this movie"</li>
+                        <li>"Pause the video"</li>
+                        <li>"Skip to the next song"</li>
+                    </ul>
+
+                    <h3>Gesture Control</h3>
+                    <p>Revolutionary gesture recognition allows you to control playback without touching your device:</p>
+                    <ul>
+                        <li><strong>👏 Clap hands:</strong> Play/Pause toggle</li>
+                        <li><strong>Wave left/right:</strong> Previous/Next track</li>
+                        <li><strong>Thumbs up/down:</strong> Like/Dislike</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/ai-assistant.png" alt="AI Assistant Interface" loading="lazy">
+                    </div>
+
+                    <h3>Smart Subtitle Search</h3>
+                    <p>The AI assistant automatically searches for and downloads subtitles in your preferred language. Just ask!</p>
+                </div>
+            </section>
+
+            <section id="backend-support" class="doc-section">
+                <h2>⚙️ Backend Support</h2>
+                <div class="feature-detail">
+                    <p>4allMedia Player is built on the most powerful media playback libraries available:</p>
+
+                    <div class="backend-cards">
+                        <div class="backend-card">
+                            <h3>GStreamer</h3>
+                            <p>Industry-standard multimedia framework for maximum compatibility</p>
+                        </div>
+                        <div class="backend-card">
+                            <h3>MPV</h3>
+                            <p>Lightweight and powerful video player with advanced features</p>
+                        </div>
+                        <div class="backend-card">
+                            <h3>VLC</h3>
+                            <p>Trusted by millions for reliable playback of any format</p>
+                        </div>
+                    </div>
+
+                    <h3>Supported Formats</h3>
+                    <p>Play literally everything:</p>
+                    <ul>
+                        <li><strong>Video:</strong> MP4, MKV, AVI, MOV, WEBM, FLV, WMV, and more</li>
+                        <li><strong>Audio:</strong> MP3, FLAC, WAV, AAC, OGG, M4A, and more</li>
+                        <li><strong>Streaming:</strong> YouTube, Twitch, HTTP/HTTPS streams</li>
+                        <li><strong>Subtitles:</strong> SRT, ASS, SSA, VTT</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/formats-support.png" alt="Supported Formats" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section id="file-navigation" class="doc-section">
+                <h2>📁 File Navigation & Filters</h2>
+                <div class="feature-detail">
+                    <p>Navigate your media library with ease using our intuitive left-side panel.</p>
+
+                    <h3>Smart Filters</h3>
+                    <div class="filter-grid">
+                        <div class="filter-item">
+                            <span class="filter-icon">🎬</span>
+                            <strong>Videos</strong>
+                            <p>All your movies and TV shows</p>
+                        </div>
+                        <div class="filter-item">
+                            <span class="filter-icon">📱</span>
+                            <strong>Shorts</strong>
+                            <p>Quick clips and short videos</p>
+                        </div>
+                        <div class="filter-item">
+                            <span class="filter-icon">🎵</span>
+                            <strong>Music</strong>
+                            <p>Audio files and albums</p>
+                        </div>
+                        <div class="filter-item">
+                            <span class="filter-icon">🎤</span>
+                            <strong>Music Videos</strong>
+                            <p>Your favorite MVs</p>
+                        </div>
+                        <div class="filter-item">
+                            <span class="filter-icon">📋</span>
+                            <strong>Playlists</strong>
+                            <p>Custom collections</p>
+                        </div>
+                    </div>
+
+                    <h3>Quick Search</h3>
+                    <p>Find any file instantly with our lightning-fast search functionality. Search by name, artist, album, or genre.</p>
+
+                    <div class="image-placeholder">
+                        <img src="./images/navigation.png" alt="File Navigation" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section id="playlist" class="doc-section">
+                <h2>📋 Playlist Management</h2>
+                <div class="feature-detail">
+                    <p>Create and manage your perfect playlists with powerful tools.</p>
+
+                    <h3>Features</h3>
+                    <ul>
+                        <li><strong>Create:</strong> Build unlimited playlists for any mood</li>
+                        <li><strong>Add/Remove:</strong> Drag and drop files or use right-click menu</li>
+                        <li><strong>Sort:</strong> By name, artist, duration, date added</li>
+                        <li><strong>Smart Playlists:</strong> Auto-generate based on genre, mood, or listening history</li>
+                        <li><strong>Import/Export:</strong> M3U, PLS, and XSPF format support</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/playlist-manager.png" alt="Playlist Management" loading="lazy">
+                    </div>
+
+                    <h3>Collaborative Playlists</h3>
+                    <p>Share playlists with friends and let them contribute their favorite tracks!</p>
+                </div>
+            </section>
+
+            <section id="lyrics" class="doc-section">
+                <h2>🎤 Lyrics Support</h2>
+                <div class="feature-detail">
+                    <p>Sing along with synchronized lyrics display.</p>
+
+                    <h3>Multiple Input Methods</h3>
+                    <ul>
+                        <li><strong>Manual Entry:</strong> Paste or type lyrics directly</li>
+                        <li><strong>Auto Search:</strong> Automatically search online databases</li>
+                        <li><strong>LRC Files:</strong> Import synchronized .lrc files</li>
+                        <li><strong>Edit Mode:</strong> Fine-tune timing and text</li>
+                    </ul>
+
+                    <h3>Display Options</h3>
+                    <p>Customize how lyrics appear:</p>
+                    <ul>
+                        <li>Toggle show/hide with one click</li>
+                        <li>Adjust font size and style</li>
+                        <li>Change background opacity</li>
+                        <li>Choose highlight colors</li>
+                        <li>Karaoke mode with word-by-word highlighting</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/lyrics-display.png" alt="Lyrics Display" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section id="playback-controls" class="doc-section">
+                <h2>⏯️ Playback Controls</h2>
+                <div class="feature-detail">
+                    <p>Complete control over your media playback experience.</p>
+
+                    <h3>Basic Controls</h3>
+                    <div class="controls-grid">
+                        <div class="control-item">▶️ Play</div>
+                        <div class="control-item">⏸️ Pause</div>
+                        <div class="control-item">⏹️ Stop</div>
+                        <div class="control-item">⏭️ Next</div>
+                        <div class="control-item">⏮️ Previous</div>
+                    </div>
+
+                    <h3>Advanced Features</h3>
+                    <ul>
+                        <li><strong>Shuffle:</strong> Random playback order</li>
+                        <li><strong>Repeat Modes:</strong> All, One, or Off</li>
+                        <li><strong>A-B Repeat:</strong> Loop specific sections</li>
+                        <li><strong>Playback Speed:</strong> 0.25x to 4x speed control</li>
+                        <li><strong>Equalizer:</strong> 10-band EQ with presets</li>
+                        <li><strong>Audio Boost:</strong> Enhance volume up to 200%</li>
+                        <li><strong>Video Filters:</strong> Brightness, contrast, saturation</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/playback-controls.png" alt="Playback Controls" loading="lazy">
+                    </div>
+
+                    <h3>Keyboard Shortcuts</h3>
+                    <p>Master efficient playback with keyboard shortcuts:</p>
+                    <ul>
+                        <li><strong>Space:</strong> Play/Pause</li>
+                        <li><strong>→/←:</strong> Seek forward/backward 5s</li>
+                        <li><strong>↑/↓:</strong> Volume up/down</li>
+                        <li><strong>F:</strong> Fullscreen</li>
+                        <li><strong>M:</strong> Mute</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="customization" class="doc-section">
+                <h2>🎨 Appearance & Personalization</h2>
+                <div class="feature-detail">
+                    <p>Make 4allMedia Player truly yours with extensive customization options.</p>
+
+                    <h3>Skins & Themes</h3>
+                    <p>Choose from dozens of pre-made skins or create your own:</p>
+                    <ul>
+                        <li>Dark Mode (OLED-friendly)</li>
+                        <li>Light Mode</li>
+                        <li>Colorful themes (Sunset, Ocean, Forest, Neon)</li>
+                        <li>Minimalist themes</li>
+                        <li>Custom CSS support</li>
+                    </ul>
+
+                    <div class="theme-preview">
+                        <div class="theme-sample dark">Dark</div>
+                        <div class="theme-sample light">Light</div>
+                        <div class="theme-sample sunset">Sunset</div>
+                        <div class="theme-sample ocean">Ocean</div>
+                    </div>
+
+                    <h3>Color Customization</h3>
+                    <ul>
+                        <li><strong>Buttons:</strong> Change color of all UI buttons</li>
+                        <li><strong>Accents:</strong> Customize highlight colors</li>
+                        <li><strong>Progress Bar:</strong> Choose your favorite color</li>
+                        <li><strong>Text:</strong> Adjust text colors for readability</li>
+                    </ul>
+
+                    <h3>Background Options</h3>
+                    <ul>
+                        <li>Solid colors</li>
+                        <li>Gradients (linear, radial)</li>
+                        <li>Custom images</li>
+                        <li>Video backgrounds</li>
+                        <li>Animated backgrounds</li>
+                        <li>Album art as background (with blur effect)</li>
+                    </ul>
+
+                    <h3>Lyrics Background</h3>
+                    <p>Separate customization for lyrics panel:</p>
+                    <ul>
+                        <li>Transparent overlay</li>
+                        <li>Custom opacity (0-100%)</li>
+                        <li>Background color or image</li>
+                        <li>Blur effects</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/customization.png" alt="Customization Options" loading="lazy">
+                    </div>
+
+                    <h3>Layout Options</h3>
+                    <p>Arrange UI elements your way:</p>
+                    <ul>
+                        <li>Compact mode for small screens</li>
+                        <li>Theater mode for immersive viewing</li>
+                        <li>Side-by-side playlist view</li>
+                        <li>Floating player window</li>
+                        <li>Picture-in-picture support</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 4allMedia Player. Free & Open Source</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">Discord</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
