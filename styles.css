@@ -1,5 +1,5 @@
 /* ================================
-   4allMedia Player - Colorful 2020 Vibe Styles
+   4allMedia Player - Colorful Vibe Styles
    ================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Righteous&display=swap');
@@ -34,6 +34,7 @@ body.light-mode {
     --card-bg: rgba(0, 0, 0, 0.05);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --accent: #28a745;
 }
 
 * {
@@ -62,8 +63,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 1000;
     border-bottom: 2px solid var(--primary);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -71,9 +75,9 @@ body {
 }
 
 body.light-mode .navbar {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.95) !important;
     border-bottom: 2px solid var(--primary);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 .logo h1 {
@@ -168,6 +172,7 @@ body.light-mode .theme-toggle {
 
 .hero {
     padding: 5rem 5%;
+    padding-top: 8rem;
     background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
     position: relative;
     overflow: hidden;
@@ -240,6 +245,11 @@ body.light-mode .hero {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     color: #ddd;
+    transition: color 0.3s ease;
+}
+
+body.light-mode .description {
+    color: #333;
 }
 
 .cta-buttons {
@@ -517,7 +527,7 @@ body.light-mode .screenshots {
 
 .btn-download {
     background: white;
-    color: var(--dark);
+    color: #1a1a2e;
     padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
@@ -525,6 +535,11 @@ body.light-mode .screenshots {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: var(--shadow);
+}
+
+body.light-mode .btn-download {
+    background: #1a1a2e;
+    color: white;
 }
 
 .btn-download:hover {
@@ -590,8 +605,8 @@ body.light-mode footer {
     padding: 2rem 1rem;
     border-right: 2px solid var(--primary);
     position: sticky;
-    top: 80px;
-    height: calc(100vh - 80px);
+    top: 90px;
+    height: calc(100vh - 90px);
     overflow-y: auto;
     transition: background 0.3s ease;
 }
