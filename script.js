@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeIcon = document.querySelector('.theme-icon');
     const body = document.body;
     
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Check for saved theme preference or default to dark mode
+    const currentTheme = localStorage.getItem('theme') || 'dark';
     
     if (currentTheme === 'light') {
         body.classList.add('light-mode');
@@ -42,6 +42,181 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300);
         });
     }
+    
+    // ================================
+    // Screenshot Zoom/Lightbox Functionality
+    // ================================
+    
+    function createLightbox() {
+        // Check if lightbox already exists
+        if (document.getElementById('imageLightbox')) {
+            return;
+        }
+        
+        const lightbox = document.createElement('div');
+        lightbox.id = 'imageLightbox';
+        lightbox.style.cssText = `
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        `;
+        
+        lightbox.innerHTML = `
+            <button id="closeLightbox" style="
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                border: none;
+                color: white;
+                font-size: 3rem;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 3001;
+                line-height: 1;
+                padding: 0;
+            ">×</button>
+            <img id="lightboxImage" style="
+                max-width: 90%;
+                max-height: 90vh;
+                object-fit: contain;
+                border-radius: 10px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+                transform: scale(0.9);
+                transition: transform 0.3s ease;
+            " src="" alt="Zoomed screenshot">
+            <p id="lightboxCaption" style="
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 1.2rem;
+                font-weight: 600;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 1rem 2rem;
+                border-radius: 30px;
+                backdrop-filter: blur(10px);
+            "></p>
+        `;
+        
+        document.body.appendChild(lightbox);
+        
+        const closeBtn = document.getElementById('closeLightbox');
+        const lightboxImg = document.getElementById('lightboxImage');
+        
+        // Hover effect for close button
+        closeBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1) rotate(90deg)';
+            this.style.boxShadow = '0 10px 30px rgba(255, 107, 107, 0.5)';
+        });
+        
+        closeBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+            this.style.boxShadow = 'none';
+        });
+        
+        // Close button functionality
+        closeBtn.addEventListener('click', closeLightbox);
+        
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target.id === 'imageLightbox') {
+                closeLightbox();
+            }
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                closeLightbox();
+            }
+        });
+        
+        // Animate image when it loads
+        lightboxImg.addEventListener('load', function() {
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 10);
+        });
+    }
+    
+    function openLightbox(imageSrc, caption) {
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        
+        lightboxImage.src = imageSrc;
+        lightboxCaption.textContent = caption || '';
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        
+        // Fade in
+        setTimeout(() => {
+            lightbox.style.opacity = '1';
+        }, 10);
+    }
+    
+    function closeLightbox() {
+        const lightbox = document.getElementById('imageLightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        
+        lightbox.style.opacity = '0';
+        lightboxImage.style.transform = 'scale(0.9)';
+        
+        setTimeout(() => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+    
+    // Add click handlers to all screenshot images
+    function initializeScreenshotZoom() {
+        const screenshotItems = document.querySelectorAll('.screenshot-item');
+        
+        screenshotItems.forEach(item => {
+            const img = item.querySelector('img');
+            const caption = item.querySelector('p');
+            
+            if (img) {
+                img.style.cursor = 'zoom-in';
+                img.style.transition = 'transform 0.3s ease';
+                
+                // Add hover effect
+                img.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                
+                img.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+                
+                // Add click handler
+                img.addEventListener('click', () => {
+                    openLightbox(img.src, caption ? caption.textContent : '');
+                });
+            }
+        });
+    }
+    
+    // Initialize lightbox
+    createLightbox();
+    initializeScreenshotZoom();
     
     // ================================
     // Documentation Navigation
@@ -103,11 +278,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // ================================
-    // Navbar Background on Scroll - REMOVED
-    // Navigation stays consistent in light/dark mode
-    // ================================
     
     // ================================
     // Animate Elements on Scroll
