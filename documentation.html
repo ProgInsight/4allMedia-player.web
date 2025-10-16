@@ -15,8 +15,9 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="documentation.html" class="active">Features</a></li>
+                <li><a href="themes.html">Themes</a></li>
                 <li><a href="index.html#download">Download</a></li>
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#about">About</a></li> 
             </ul>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <span class="theme-icon">🌙</span>
@@ -28,22 +29,339 @@
         <aside class="sidebar">
             <h3>Features</h3>
             <ul class="docs-nav">
-                <li><a href="#ai-assistant" class="nav-item active">AI Assistant</a></li>
-                <li><a href="#backend-support">Backend Support</a></li>
-                <li><a href="#file-navigation">File Navigation</a></li>
-                <li><a href="#playlist">Playlist Management</a></li>
-                <li><a href="#lyrics">Lyrics Support</a></li>
-                <li><a href="#playback-controls">Playback Controls</a></li>
-                <li><a href="#customization">Appearance & Customization</a></li>
+                <li><a href="#help-getting-started" class="nav-item active">Getting Started</a></li>
+                <li><a href="#add-folder" class="nav-item">Add Folder for Scanning</a></li>
+                <li><a href="#playlist-management" class="nav-item">Playlist Management</a></li>
+                <li><a href="#delete-playlist" class="nav-item">Delete Playlist</a></li>
+                <li><a href="#add-playlist" class="nav-item">Add Playlist</a></li>
+                <li><a href="#open-files" class="nav-item">Opening Files</a></li>
+                <li><a href="#access-settings" class="nav-item">Access Settings</a></li>
+                <li><a href="#ai-widget" class="nav-item">AI Widget</a></li>
+                <li><a href="#ai-assistant" class="nav-item">AI Assistant</a></li>
+                <li><a href="#backend-support" class="nav-item">Backend Support</a></li>
+                <li><a href="#file-navigation" class="nav-item">File Navigation</a></li>
+                <li><a href="#lyrics" class="nav-item">Lyrics Support</a></li>
+                <li><a href="#playback-controls" class="nav-item">Playback Controls</a></li>
+                <li><a href="#customization" class="nav-item">Appearance & Customization</a></li>
             </ul>
         </aside>
 
         <main class="docs-content">
-            <section id="ai-assistant" class="doc-section active">
-                <h2>🤖 AI Assistant</h2>
+            <!-- Help Section -->
+            <section id="help-getting-started" class="doc-section active">
+                <h2>📌</h2>
+                <h2>Getting Started with 4allMedia Player</h2>
+                <div class="feature-detail">
+                    <p>Welcome to 4allMedia Player! This guide will help you get up and running with all the essential features. Start by learning how to add folders, manage playlists, and configure your settings.</p>
+
+                    <h3>Quick Start</h3>
+                    <p>Follow these steps in order to set up your media library:</p>
+                    <ul>
+                        <li>First, add folders to scan for media files</li>
+                        <li>Create playlists to organize your content</li>
+                        <li>Customize your player appearance and settings</li>
+                        <li>Enable the AI widget for voice control and assistance</li>
+                    </ul>
+
+                    <p>Each step is explained in detail in the sections below. Click on any feature in the left menu to jump to that topic.</p>
+                </div>
+            </section>
+
+            <!-- Add Folder Section -->
+            <section id="add-folder" class="doc-section">
+                <h2>📌</h2>
+                <h2>Add Folder for Scanning</h2>
+                <div class="feature-detail">
+                    <p>Add folders to your library so 4allMedia Player can scan and index all your media files.</p>
+
+                    <h3>How to Add a Folder</h3>
+                    <ul>
+                        <li><strong>Step 1:</strong> Click on the "Add Folder" button in the left navigation panel</li>
+                        <li><strong>Step 2:</strong> A file browser dialog will open</li>
+                        <li><strong>Step 3:</strong> Navigate to the folder containing your media files</li>
+                        <li><strong>Step 4:</strong> Click "Select" or "Add Folder" to confirm</li>
+                        <li><strong>Step 5:</strong> The player will begin scanning for media files automatically</li>
+                    </ul>
+
+                    <h3>Scanning Process</h3>
+                    <p>Once you add a folder, the player will:</p>
+                    <ul>
+                        <li>Recursively scan all subfolders for supported media files</li>
+                        <li>Index file metadata (title, artist, duration, etc.)</li>
+                        <li>Display progress in the status bar</li>
+                        <li>Add discovered media to your library automatically</li>
+                    </ul>
+
+                    <h3>Tips</h3>
+                    <ul>
+                        <li>You can add multiple folders - they will all be scanned and indexed</li>
+                        <li>Use your largest media storage folder to get the most out of your library</li>
+                        <li>The scanning process runs in the background and won't slow down playback</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/add-folder.png" alt="Add Folder Interface" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Playlist Management Section -->
+            <section id="playlist-management" class="doc-section">
+                <h2>📌</h2>
+                <h2>Playlist Management Overview</h2>
+                <div class="feature-detail">
+                    <p>Playlists are collections of media files organized by your preferences. Manage all your playlists from the main library view.</p>
+
+                    <h3>Main Playlist Features</h3>
+                    <ul>
+                        <li><strong>View Playlists:</strong> All your playlists appear in the left sidebar under "Playlists"</li>
+                        <li><strong>Right-Click Context Menu:</strong> Right-click any playlist to see options</li>
+                        <li><strong>Drag and Drop:</strong> Drag files directly into a playlist</li>
+                        <li><strong>Reorder Items:</strong> Click and drag tracks within a playlist to reorder them</li>
+                        <li><strong>Quick Preview:</strong> Hover over a playlist to see track count and total duration</li>
+                    </ul>
+
+                    <h3>Adding Tracks to Playlists</h3>
+                    <ul>
+                        <li>Drag and drop files from your library into the playlist</li>
+                        <li>Right-click a track and select "Add to Playlist"</li>
+                        <li>Use the context menu to add multiple tracks at once</li>
+                    </ul>
+
+                    <h3>Removing Tracks</h3>
+                    <ul>
+                        <li>Right-click a track in the playlist and select "Remove from Playlist"</li>
+                        <li>Select multiple tracks and delete them together</li>
+                        <li>Tracks are removed from the playlist but remain in your library</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/playlist-management.png" alt="Playlist Management" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Delete Playlist Section -->
+            <section id="delete-playlist" class="doc-section">
+                <h2>📌</h2>
+                <h2>Delete Playlist</h2>
+                <div class="feature-detail">
+                    <p>Remove playlists you no longer need. Deleting a playlist removes the collection but not the original media files.</p>
+
+                    <h3>How to Delete a Playlist</h3>
+                    <ul>
+                        <li><strong>Method 1 - Right-Click:</strong> Right-click the playlist name in the sidebar and select "Delete Playlist"</li>
+                        <li><strong>Method 2 - Settings:</strong> Open the playlist and click the delete icon in the top-right corner</li>
+                        <li><strong>Method 3 - Keyboard:</strong> Select the playlist and press the Delete key</li>
+                    </ul>
+
+                    <h3>Confirmation</h3>
+                    <p>A confirmation dialog will appear asking if you want to delete the playlist. This prevents accidental deletion. Click "Confirm" to proceed or "Cancel" to keep the playlist.</p>
+
+                    <h3>What Happens After Deletion</h3>
+                    <ul>
+                        <li>The playlist is removed from your library</li>
+                        <li>All media files in the playlist remain in your library</li>
+                        <li>Deletion is permanent and cannot be undone</li>
+                        <li>If you want to recover the playlist, you must recreate it manually</li>
+                    </ul>
+
+                    <h3>Important Note</h3>
+                    <p>You can also clear all tracks from a playlist without deleting it. This is useful if you want to reuse the playlist for different content. Simply select all tracks in the playlist and remove them.</p>
+
+                    <div class="image-placeholder">
+                        <img src="./images/delete-playlist.png" alt="Delete Playlist Confirmation" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add Playlist Section -->
+            <section id="add-playlist" class="doc-section">
+                <h2>📌</h2>
+                <h2>Add Playlist</h2>
+                <div class="feature-detail">
+                    <p>Create new playlists to organize your media by mood, genre, or any custom category you prefer.</p>
+
+                    <h3>How to Create a New Playlist</h3>
+                    <ul>
+                        <li><strong>Step 1:</strong> Click the "Create Playlist" or "+" button in the Playlists section</li>
+                        <li><strong>Step 2:</strong> A dialog box will appear asking for the playlist name</li>
+                        <li><strong>Step 3:</strong> Type your desired playlist name (e.g., "Workout Mix", "Chill Vibes")</li>
+                        <li><strong>Step 4:</strong> Click "Create" to add the new playlist</li>
+                        <li><strong>Step 5:</strong> Your new playlist appears in the sidebar ready for content</li>
+                    </ul>
+
+                    <h3>Adding Content to New Playlist</h3>
+                    <ul>
+                        <li>Drag and drop media files from your library into the new playlist</li>
+                        <li>Right-click files and select "Add to [Playlist Name]"</li>
+                        <li>Use bulk selection to add multiple files at once</li>
+                    </ul>
+
+                    <h3>Rename Playlist</h3>
+                    <ul>
+                        <li>Right-click the playlist name and select "Rename"</li>
+                        <li>Enter the new name and press Enter or click "Save"</li>
+                    </ul>
+
+                    <h3>Playlist Organization Tips</h3>
+                    <ul>
+                        <li>Create playlists by genre, artist, mood, or activity</li>
+                        <li>Use descriptive names so you can find them easily</li>
+                        <li>Organize playlists into folders by right-clicking and selecting "Create Folder"</li>
+                        <li>Export playlists to share with friends (M3U, PLS, XSPF formats)</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/add-playlist.png" alt="Create New Playlist" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Opening Files Section -->
+            <section id="open-files" class="doc-section">
+                <h2>📌</h2>
+                <h2>Opening Files</h2>
+                <div class="feature-detail">
+                    <p>Learn the various ways to open and play media files in 4allMedia Player.</p>
+
+                    <h3>Ways to Open Files</h3>
+                    <ul>
+                        <li><strong>From Library:</strong> Double-click any file in your library to start playing</li>
+                        <li><strong>File Browser:</strong> Click "Open File" button and browse your computer</li>
+                        <li><strong>Drag & Drop:</strong> Drag media files directly onto the player window</li>
+                        <li><strong>Context Menu:</strong> Right-click a file in your system and select "Open with 4allMedia"</li>
+                        <li><strong>Keyboard Shortcut:</strong> Press Ctrl+O (Windows/Linux) or Cmd+O (Mac) to open file dialog</li>
+                    </ul>
+
+                    <h3>Opening URLs and Streams</h3>
+                    <ul>
+                        <li>Click "Open URL" from the File menu</li>
+                        <li>Paste YouTube, Twitch, or HTTP stream links</li>
+                        <li>Press Enter to start playback</li>
+                        <li>The player supports most streaming protocols</li>
+                    </ul>
+
+                    <h3>Recently Played</h3>
+                    <ul>
+                        <li>Access your recently played files from the "Recent" section</li>
+                        <li>Quick resume playback where you left off</li>
+                        <li>Clear recent history from Settings if needed</li>
+                    </ul>
+
+                    <h3>Keyboard Shortcuts for File Operations</h3>
+                    <ul>
+                        <li><strong>Ctrl+O:</strong> Open file dialog</li>
+                        <li><strong>Ctrl+L:</strong> Open URL/stream</li>
+                        <li><strong>Ctrl+Q:</strong> Quit application</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/open-files.png" alt="Opening Files Options" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Access Settings Section -->
+            <section id="access-settings" class="doc-section">
+                <h2>📌</h2>
+                <h2>Access Settings</h2>
+                <div class="feature-detail">
+                    <p>Customize 4allMedia Player to your preferences through the Settings menu. Configure appearance, playback behavior, library options, and more.</p>
+
+                    <h3>How to Open Settings</h3>
+                    <ul>
+                        <li><strong>Method 1:</strong> Click the gear icon (⚙️) in the top-right corner</li>
+                        <li><strong>Method 2:</strong> Press Ctrl+, (comma) keyboard shortcut</li>
+                        <li><strong>Method 3:</strong> Go to File menu → Settings</li>
+                        <li><strong>Method 4:</strong> Right-click the player window and select "Settings"</li>
+                    </ul>
+
+                    <h3>Settings Categories</h3>
+                    <ul>
+                        <li><strong>General:</strong> Language, startup behavior, library options</li>
+                        <li><strong>Appearance:</strong> Theme, colors, fonts, layout options</li>
+                        <li><strong>Playback:</strong> Default playback settings, equalizer presets, audio device</li>
+                        <li><strong>Advanced:</strong> Cache settings, performance options, file associations</li>
+                        <li><strong>AI & Voice:</strong> Enable/disable AI features, voice control settings</li>
+                        <li><strong>About:</strong> Version info, updates, support links</li>
+                    </ul>
+
+                    <h3>Popular Settings to Configure</h3>
+                    <ul>
+                        <li><strong>Default Theme:</strong> Choose between Dark, Light, or custom themes</li>
+                        <li><strong>Autoplay Next:</strong> Automatically play next item when current ends</li>
+                        <li><strong>Remember Position:</strong> Resume videos where you left off</li>
+                        <li><strong>Audio Device:</strong> Select output device (speakers, headphones, etc.)</li>
+                        <li><strong>Subtitle Language:</strong> Set preferred subtitle language for auto-search</li>
+                    </ul>
+
+                    <h3>Search Settings</h3>
+                    <p>Use the search box at the top of Settings to quickly find specific options without scrolling.</p>
+
+                    <div class="image-placeholder">
+                        <img src="./images/settings.png" alt="Settings Menu" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Widget Section -->
+            <section id="ai-widget" class="doc-section">
+                <h2>📌</h2>
+                <h2>AI Widget</h2>
+                <div class="feature-detail">
+                    <p>The AI Widget is your floating control panel for voice commands, gesture recognition, and quick playback adjustments.</p>
+
+                    <h3>Enabling the AI Widget</h3>
+                    <ul>
+                        <li>Click the AI icon in the main toolbar</li>
+                        <li>Or go to Settings → AI & Voice → Enable AI Widget</li>
+                        <li>The widget appears as a floating panel on your screen</li>
+                        <li>You can move it by dragging the header bar</li>
+                    </ul>
+
+                    <h3>AI Widget Features</h3>
+                    <ul>
+                        <li><strong>Voice Input:</strong> Click the microphone button and speak your command</li>
+                        <li><strong>Gesture Recognition:</strong> Enable your camera for hand gesture control</li>
+                        <li><strong>Quick Controls:</strong> Fast access buttons for Play, Pause, Skip</li>
+                        <li><strong>Smart Search:</strong> Ask the AI to find and play specific content</li>
+                        <li><strong>Volume Control:</strong> Slide the volume bar without touching your device</li>
+                    </ul>
+
+                    <h3>Voice Commands</h3>
+                    <p>Try these voice commands with the AI Widget:</p>
+                    <ul>
+                        <li>"Play my workout playlist"</li>
+                        <li>"Next track"</li>
+                        <li>"Lower the volume"</li>
+                        <li>"Find jazz music"</li>
+                        <li>"Skip this song"</li>
+                        <li>"Shuffle mode"</li>
+                    </ul>
+
+                    <h3>Widget Settings</h3>
+                    <ul>
+                        <li>Resize by dragging the corner</li>
+                        <li>Minimize to taskbar when not in use</li>
+                        <li>Set transparency level for the widget</li>
+                        <li>Configure microphone sensitivity</li>
+                        <li>Enable/disable specific features</li>
+                    </ul>
+
+                    <div class="image-placeholder">
+                        <img src="./images/ai-widget.png" alt="AI Widget Interface" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Assistant Section -->
+            <section id="ai-assistant" class="doc-section">
+                <h2>📌</h2>
+                <h2>AI Assistant</h2>
                 <div class="feature-detail">
                     <p>Experience hands-free media control with our intelligent AI assistant. Interact naturally using voice commands or gestures.</p>
-                    
+
                     <h3>Voice Control</h3>
                     <p>Simply speak to control your media:</p>
                     <ul>
@@ -61,17 +379,19 @@
                         <li><strong>Thumbs up/down:</strong> Like/Dislike</li>
                     </ul>
 
+                    <h3>Smart Subtitle Search</h3>
+                    <p>The AI assistant automatically searches for and downloads subtitles in your preferred language. Just ask!</p>
+
                     <div class="image-placeholder">
                         <img src="./images/ai-assistant.png" alt="AI Assistant Interface" loading="lazy">
                     </div>
-
-                    <h3>Smart Subtitle Search</h3>
-                    <p>The AI assistant automatically searches for and downloads subtitles in your preferred language. Just ask!</p>
                 </div>
             </section>
 
+            <!-- Backend Support Section -->
             <section id="backend-support" class="doc-section">
-                <h2>⚙️ Backend Support</h2>
+                <h2>📌</h2>
+                <h2>Backend Support</h2>
                 <div class="feature-detail">
                     <p>4allMedia Player is built on the most powerful media playback libraries available:</p>
 
@@ -91,6 +411,7 @@
                     </div>
 
                     <h3>Supported Formats</h3>
+                    <h2>📌</h2>
                     <p>Play literally everything:</p>
                     <ul>
                         <li><strong>Video:</strong> MP4, MKV, AVI, MOV, WEBM, FLV, WMV, and more</li>
@@ -105,8 +426,10 @@
                 </div>
             </section>
 
+            <!-- File Navigation Section -->
             <section id="file-navigation" class="doc-section">
-                <h2>📁 File Navigation & Filters</h2>
+                <h2>📌</h2>
+                <h2>File Navigation & Filters</h2>
                 <div class="feature-detail">
                     <p>Navigate your media library with ease using our intuitive left-side panel.</p>
 
@@ -148,31 +471,10 @@
                 </div>
             </section>
 
-            <section id="playlist" class="doc-section">
-                <h2>📋 Playlist Management</h2>
-                <div class="feature-detail">
-                    <p>Create and manage your perfect playlists with powerful tools.</p>
-
-                    <h3>Features</h3>
-                    <ul>
-                        <li><strong>Create:</strong> Build unlimited playlists for any mood</li>
-                        <li><strong>Add/Remove:</strong> Drag and drop files or use right-click menu</li>
-                        <li><strong>Sort:</strong> By name, artist, duration, date added</li>
-                        <li><strong>Smart Playlists:</strong> Auto-generate based on genre, mood, or listening history</li>
-                        <li><strong>Import/Export:</strong> M3U, PLS, and XSPF format support</li>
-                    </ul>
-
-                    <div class="image-placeholder">
-                        <img src="./images/playlist-manager.png" alt="Playlist Management" loading="lazy">
-                    </div>
-
-                    <h3>Collaborative Playlists</h3>
-                    <p>Share playlists with friends and let them contribute their favorite tracks!</p>
-                </div>
-            </section>
-
+            <!-- Lyrics Support Section -->
             <section id="lyrics" class="doc-section">
-                <h2>🎤 Lyrics Support</h2>
+                <h2>📌</h2>
+                <h2>Lyrics Support</h2>
                 <div class="feature-detail">
                     <p>Sing along with synchronized lyrics display.</p>
 
@@ -200,8 +502,10 @@
                 </div>
             </section>
 
+            <!-- Playback Controls Section -->
             <section id="playback-controls" class="doc-section">
-                <h2>⏯️ Playback Controls</h2>
+                <h2>📌</h2>
+                <h2>Playback Controls</h2>
                 <div class="feature-detail">
                     <p>Complete control over your media playback experience.</p>
 
@@ -241,8 +545,10 @@
                 </div>
             </section>
 
+            <!-- Customization Section -->
             <section id="customization" class="doc-section">
-                <h2>🎨 Appearance & Personalization</h2>
+                <h2>📌</h2>
+                <h2>Appearance & Personalization</h2>
                 <div class="feature-detail">
                     <p>Make 4allMedia Player truly yours with extensive customization options.</p>
 
