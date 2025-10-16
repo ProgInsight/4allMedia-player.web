@@ -3,266 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProgInsight - AI-Powered Media Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <title>4allMedia Player - Play Everything, Everywhere</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <span class="logo-icon">🚀</span>
-                    <span class="logo-text">ProgInsight</span>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🎵 4allMedia <span class="highlight">Player</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="documentation.html">Features</a></li>
+                <li><a href="themes.html">Themes</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="glitch" data-text="Play Everything">Play Everything</h2>
+                <p class="tagline">Your AI-Powered Media Companion</p>
+                <p class="description">Experience the future of media playback with voice control, smart assistant, and unlimited format support - completely free!</p>
+                <p class="description" style="font-style: italic;">Play with confidence any time, any where!</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn btn-primary">Download Now</a>
+                    <a href="documentation.html" class="btn btn-secondary">Explore Features</a>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact" class="btn-contact">Contact</a></li>
-                    <li>
-                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                            <span class="sun-icon">☀️</span>
-                            <span class="moon-icon">🌙</span>
-                        </button>
-                    </li>
+            </div>
+            <div class="hero-image">
+                <img src="./images/lovable.png" alt="4allMedia Player Mascot" class="floating">
+            </div>
+        </div>
+    </section>
+
+    <section class="features-preview">
+        <h2 class="section-title">Why Choose 4allMedia?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">🤖</div>
+                <h3>AI Assistant</h3>
+                <p>Control playback with voice commands and gestures. Just clap to pause!</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎬</div>
+                <h3>Universal Player</h3>
+                <p>Play any format with GStreamer, MPV, and VLC backends</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎨</div>
+                <h3>Full Customization</h3>
+                <p>Change skins, colors, backgrounds - make it yours!</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎵</div>
+                <h3>Smart Organization</h3>
+                <p>Videos, music, playlists - all organized beautifully</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="./images/woman.png" alt="About 4allMedia" class="pulse">
+            </div>
+            <div class="about-text">
+                <h2>Built for Media Lovers</h2>
+                <p>4allMedia Player combines powerful playback engines with modern AI to create the ultimate media experience. Whether you're watching movies, listening to music, or managing playlists, we've got you covered.</p>
+                <ul class="features-list">
+                    <li>✨ 100% Free Forever</li>
+                    <li>🚫 No Ads, Ever</li>
+                    <li>🔓 Open Source</li>
+                    <li>💪 Powerful & Lightweight</li>
                 </ul>
             </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="gradient-text">AI-Powered</span><br>
-                        Media Solutions
-                    </h1>
-                    <p class="hero-description">
-                        Experience the future of media management with intelligent tools 
-                        designed to simplify your digital life.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary">Explore Products</button>
-                        <button class="btn btn-secondary">Learn More</button>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="floating-card card-1"></div>
-                    <div class="floating-card card-2"></div>
-                    <div class="floating-card card-3"></div>
-                    <img src="./images/mascot3D.png" alt="ProgInsight Mascot" class="mascot-image">
-                </div>
-            </div>
-        </div>
-        <div class="wave-divider">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="wave-fill"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="wave-fill"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="wave-fill"></path>
-            </svg>
-        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="section-header">
-                        <span class="section-badge">About Us</span>
-                        <h2 class="section-title">Welcome to <span class="gradient-text">ProgInsight</span></h2>
-                        <p class="section-description">
-                            We love making good software for computers that everyone can use and enjoy.
-                        </p>
-                    </div>
-
-                    <ul class="about-features">
-                        <li>
-                            <span class="feature-bullet">🚀</span>
-                            <div>
-                                <strong>Modern cutting-edge technology software</strong>
-                                <p>Built with the latest technologies for optimal performance</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-bullet">⚡</span>
-                            <div>
-                                <strong>Simple to power any user</strong>
-                                <p>Intuitive interfaces designed for everyone</p>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="feature-bullet">💬</span>
-                            <div>
-                                <strong>Active customer support</strong>
-                                <p>We're here to help whenever you need us</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <img src="./images/teamspirit.png" alt="ProgInsight Team" class="toon-image">
-                </div>
+    <section class="screenshots">
+        <h2 class="section-title">See It In Action</h2>
+        <div class="screenshot-gallery">
+            <div class="screenshot-item">
+                <img src="./images/interface.png" alt="4allMedia Interface" loading="lazy">
+                <p>Beautiful Interface</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="./images/screenshot2.png" alt="AI Assistant" loading="lazy">
+                <p>AI Assistant</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="./images/screenshot3.png" alt="Playlist Manager" loading="lazy">
+                <p>Playlist Management</p>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Our Products</span>
-                <h2 class="section-title">Powerful Tools, <span class="gradient-text">Simple Experience</span></h2>
-            </div>
-
-            <div class="products-scroll-container">
-                <div class="products-grid">
-                    <!-- Product 1: YT-DLite -->
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="./images/yt-dlite.png" alt="YT-DLite" class="product-image">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">YT-DLite</h3>
-                            <p class="product-description">
-                                Smart video downloader with format recommendations and 
-                                automatic quality optimization for your favorite content.
-                            </p>
-                            <ul class="product-features">
-                                <li>🎯 Smart format detection</li>
-                                <li>🎬 Batch downloads</li>
-                                <li>💡 Quality suggestions</li>
-                                <li>📊 Progress tracking</li>
-                            </ul>
-                            <a href="https://github.com/proginsight/yt-dlite" target="_blank" class="btn btn-product">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Product 2: 4allDownloader -->
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="./images/4alldownloader.png" alt="4allDownloader" class="product-image">
-                            <div class="product-badge">AI Assistant</div>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">4allDownloader</h3>
-                            <p class="product-description">
-                                Universal media downloader supporting 1000+ sites with AI assistant 
-                                to help you manage your library automatically.
-                            </p>
-                            <ul class="product-features">
-                                <li>🌐 1000+ site support</li>
-                                <li>🤖 Smart categorization</li>
-                                <li>⚡ Multi-threaded downloads</li>
-                                <li>📁 Auto organization</li>
-                            </ul>
-                            <a href="https://github.com/proginsight/4alldownloader" target="_blank" class="btn btn-product">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Product 3: 4allMedia Player -->
-                    <div class="product-card">
-                        <div class="product-image-container">
-                            <img src="./images/4allmedia.png" alt="4allMedia Player" class="product-image">
-                            <div class="product-badge">AI Assistant</div>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">4allMedia Player</h3>
-                            <p class="product-description">
-                                Next-generation media player with AI-powered recommendations, 
-                                subtitle generation, and smart playlist creation.
-                            </p>
-                            <ul class="product-features">
-                                <li>🎵 All formats supported</li>
-                                <li>📝 Auto subtitles</li>
-                                <li>🎨 Beautiful UI</li>
-                                <li>🔮 Smart playlists</li>
-                            </ul>
-                            <a href="https://github.com/proginsight/4allmedia-player" target="_blank" class="btn btn-product">Learn More</a>
-                        </div>
-                    </div>
-
-                    <!-- Coming Soon Card -->
-                    <div class="product-card coming-soon">
-                        <div class="product-image-container coming-soon-bg">
-                            <div class="coming-soon-content">
-                                <span class="coming-soon-icon">🚀</span>
-                                <h3>Coming Soon</h3>
-                            </div>
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">More Amazing Tools</h3>
-                            <p class="product-description">
-                                We're constantly working on new and exciting tools to make 
-                                your software experience even better. Stay tuned!
-                            </p>
-                            <button class="btn btn-product" disabled>Stay Tuned</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="download" class="download-section">
+        <h2>Ready to Experience 4allMedia Player?</h2>
+        <p>Available for Windows, macOS, and Linux</p>
+        <div class="download-buttons">
+            <a href="#" class="btn btn-download">🪟 Windows</a>
+            <a href="#" class="btn btn-download">🍎 macOS</a>
+            <a href="#" class="btn btn-download">🐧 Linux</a>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-wrapper">
-                <div class="cta-content">
-                    <h2 class="cta-title">Ready to Transform Your Software Experience?</h2>
-                    <p class="cta-description">Join thousands of users who trust ProgInsight</p>
-                    <button class="btn btn-large">Get Started Today</button>
-                </div>
-                <div class="cta-image">
-                    <img src="./images/rocket.png" alt="Welcome" class="welcome-image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon">🚀</span>
-                        <span class="logo-text">ProgInsight</span>
-                    </div>
-                    <p>Innovating software to make life easier</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Products</h4>
-                        <ul>
-                            <li><a href="#yt-dlite">YT-DLite</a></li>
-                            <li><a href="#4alldownloader">4allDownloader</a></li>
-                            <li><a href="#4allmedia">4allMedia Player</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#careers">Careers</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="#help">Help Center</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#privacy">Privacy</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ProgInsight. All rights reserved.</p>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 4allMedia Player. Free & Open Source</p>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">Discord</a>
+                <a href="#">Twitter</a>
             </div>
         </div>
     </footer>
