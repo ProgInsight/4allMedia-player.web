@@ -6,7 +6,7 @@
     <title>4allMedia Player - Features Documentation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body> 
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -31,9 +31,9 @@
             <ul class="docs-nav">
                 <li><a href="#help-getting-started" class="nav-item active">Getting Started</a></li>
                 <li><a href="#add-folder" class="nav-item">Add Folder for Scanning</a></li>
-                <li><a href="#playlist-management" class="nav-item">Playlist Management</a></li>
+                <li><a href="#create-playlist" class="nav-item">Create Playlist</a></li>
                 <li><a href="#delete-playlist" class="nav-item">Delete Playlist</a></li>
-                <li><a href="#add-playlist" class="nav-item">Add Playlist</a></li>
+                <li><a href="#playlist-management" class="nav-item">Playlist Management</a></li>                
                 <li><a href="#open-files" class="nav-item">Opening Files</a></li>
                 <li><a href="#access-settings" class="nav-item">Access Settings</a></li>
                 <li><a href="#ai-widget" class="nav-item">AI Widget</a></li>
@@ -52,18 +52,29 @@
                 <h2>📌</h2>
                 <h2>Getting Started with 4allMedia Player</h2>
                 <div class="feature-detail">
-                    <p>Welcome to 4allMedia Player! This guide will help you get up and running with all the essential features. Start by learning how to add folders, manage playlists, and configure your settings.</p>
+                    <p>Welcome to 4allMedia Player! This guide will help you get started with all the essential features. Learn how to add folders, manage playlists, and configure your settings.</p>
 
                     <h3>Quick Start</h3>
-                    <p>Follow these steps in order to set up your media library:</p>
+                    
+                    <h4>Fast Mode</h4>
                     <ul>
-                        <li>First, add folders to scan for media files</li>
+                        <li>Click "Open File" on the welcome screen, or use Quick Access if your media files are in the Music, Videos, or Downloads folder.</li>
+                        <li>Open files directly by right-clicking a media file and selecting "Open with 4allMedia Player".</li>
+                        <li>Drag and drop files to open them, when other media is currently playing <strong>"Not in Welcome screen"</strong>.</li>
+                        <li>Launch media from the terminal using the command: <code>"4allMedia player" "/file/path"</code>.</li>
+                    </ul>
+                    
+                    <h4>Add Media Library for Quick Access and Playlists</h4>
+                    <p>Follow these steps to set up your media library:</p>
+                    <ul>
+                        <li>Add folders to scan for media files</li>
                         <li>Create playlists to organize your content</li>
                         <li>Customize your player appearance and settings</li>
                         <li>Enable the AI widget for voice control and assistance</li>
+                        <li>Choose your preferred media backend: VLC, MPV, or GStreamer</li>
                     </ul>
 
-                    <p>Each step is explained in detail in the sections below. Click on any feature in the left menu to jump to that topic.</p>
+                    <p>Each step is explained in detail in the sections below. Click on any feature in the left menu to navigate to that topic.</p>
                 </div>
             </section>
 
@@ -72,31 +83,33 @@
                 <h2>📌</h2>
                 <h2>Add Folder for Scanning</h2>
                 <div class="feature-detail">
-                    <p>Add folders to your library so 4allMedia Player can scan and index all your media files.</p>
+                    <p>By default, 4allMedia Player automatically scans for media files in your Music and Videos folders only.</p>
+                    <p>You can add custom folders to allow 4allMedia Player to scan and index additional locations for quick access.</p>
 
                     <h3>How to Add a Folder</h3>
                     <ul>
-                        <li><strong>Step 1:</strong> Click on the "Add Folder" button in the left navigation panel</li>
-                        <li><strong>Step 2:</strong> A file browser dialog will open</li>
-                        <li><strong>Step 3:</strong> Navigate to the folder containing your media files</li>
-                        <li><strong>Step 4:</strong> Click "Select" or "Add Folder" to confirm</li>
-                        <li><strong>Step 5:</strong> The player will begin scanning for media files automatically</li>
+                        <li><strong>Step 1:</strong> Click on the "Folders" filter in the Welcome screen</li>
+                        <li><strong>Step 2:</strong> The left panel will open automatically. Look for the "+" (Add) button and click it</li>
+                        <li><strong>Step 3:</strong> A file browser dialog will open</li>
+                        <li><strong>Step 4:</strong> Navigate to the folder containing your media files</li>
+                        <li><strong>Step 5:</strong> Click "Select" or "Add Folder" to confirm</li>
+                        <li><strong>Step 6:</strong> The player will begin scanning for media files automatically</li>
                     </ul>
 
                     <h3>Scanning Process</h3>
                     <p>Once you add a folder, the player will:</p>
                     <ul>
                         <li>Recursively scan all subfolders for supported media files</li>
-                        <li>Index file metadata (title, artist, duration, etc.)</li>
+                        <li>Index file metadata (title, artist, duration, album, etc.)</li>
                         <li>Display progress in the status bar</li>
                         <li>Add discovered media to your library automatically</li>
                     </ul>
 
                     <h3>Tips</h3>
                     <ul>
-                        <li>You can add multiple folders - they will all be scanned and indexed</li>
-                        <li>Use your largest media storage folder to get the most out of your library</li>
-                        <li>The scanning process runs in the background and won't slow down playback</li>
+                        <li>You can add multiple folders—they will all be scanned and indexed</li>
+                        <li>Add your largest media storage folders to maximize your library</li>
+                        <li>The scanning process runs in the background and won't interrupt playback</li>
                     </ul>
 
                     <div class="image-placeholder">
@@ -105,38 +118,48 @@
                 </div>
             </section>
 
-            <!-- Playlist Management Section -->
-            <section id="playlist-management" class="doc-section">
+            <!-- Add Playlist Section -->
+            <section id="create-playlist" class="doc-section">
                 <h2>📌</h2>
-                <h2>Playlist Management Overview</h2>
+                <h2>Create Playlist</h2>
                 <div class="feature-detail">
-                    <p>Playlists are collections of media files organized by your preferences. Manage all your playlists from the main library view.</p>
+                    <p>Create new playlists to organize your media by mood, genre, artist, or any custom category you prefer.</p>
 
-                    <h3>Main Playlist Features</h3>
+                    <h3>How to Create a New Playlist</h3>
                     <ul>
-                        <li><strong>View Playlists:</strong> All your playlists appear in the left sidebar under "Playlists"</li>
-                        <li><strong>Right-Click Context Menu:</strong> Right-click any playlist to see options</li>
-                        <li><strong>Drag and Drop:</strong> Drag files directly into a playlist</li>
-                        <li><strong>Reorder Items:</strong> Click and drag tracks within a playlist to reorder them</li>
-                        <li><strong>Quick Preview:</strong> Hover over a playlist to see track count and total duration</li>
+                        <li><strong>Step 1:</strong> Click the "+" (Add) button in the Playlists section of the left sidebar</li>
+                        <li><strong>Step 2:</strong> A dialog box will appear prompting you to enter the playlist name</li>
+                        <li><strong>Step 3:</strong> Type your desired playlist name (e.g., "Workout Mix", "Chill Vibes", "Road Trip")</li>
+                        <li><strong>Step 4:</strong> Click "Create" to add the new playlist</li>
+                        <li><strong>Step 5:</strong> Your new playlist appears in the sidebar, ready for playing or adding more content</li>
+                        <li><strong style="color: red;">TROUBLESHOOT:</strong> Once the playlist is created, it may show no content. Consider refreshing by switching to another filter (e.g., MV) and then back to the Playlist filter.</li>
                     </ul>
 
-                    <h3>Adding Tracks to Playlists</h3>
+                    <h3>Adding Content to Your New Playlist</h3>
                     <ul>
-                        <li>Drag and drop files from your library into the playlist</li>
-                        <li>Right-click a track and select "Add to Playlist"</li>
-                        <li>Use the context menu to add multiple tracks at once</li>
+                        <li><strong>Add Files Directly:</strong> Right-click the playlist name and select "Add Files" to browse your system</li>
+                        <li><strong>From Library:</strong> Right-click any media file in your library and select "Add to [Playlist Name]"</li>
+                        <li><strong>Bulk Selection:</strong> Select multiple files, right-click on the playlist name, and add them all at once</li>
+                        <li><strong>From Filters:</strong> Navigate to Music, Videos, or other filters, select files, and add them to your playlist</li>
                     </ul>
 
-                    <h3>Removing Tracks</h3>
+                    <h3>Rename a Playlist</h3>
                     <ul>
-                        <li>Right-click a track in the playlist and select "Remove from Playlist"</li>
-                        <li>Select multiple tracks and delete them together</li>
-                        <li>Tracks are removed from the playlist but remain in your library</li>
+                        <li>You cannot rename playlists at this time. Simply create a new one instead</li>
+                        <li>To create a new playlist, see "Create Playlist" above</li>
+                    </ul>
+
+                    <h3>Playlist Organization Tips</h3>
+                    <ul>
+                        <li>Create playlists by genre, artist, mood, or activity for easy access.</li>
+                        <li>Use descriptive names so you can identify playlists quickly.</li>
+                        <li>Consider creating seasonal or event-based playlists (e.g., "Summer 2025", "Party Mix").</li>
+                        <li>Export playlists to share with friends (supports M3U, PLS, and XSPF formats).</li>
+                        <li>After creating a playlist, consider refreshing by switching to another filter, then back to the Playlist filter.</li>
                     </ul>
 
                     <div class="image-placeholder">
-                        <img src="./images/playlist-management.png" alt="Playlist Management" loading="lazy">
+                        <img src="./images/add-playlist.png" alt="Create New Playlist Dialog" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -146,114 +169,143 @@
                 <h2>📌</h2>
                 <h2>Delete Playlist</h2>
                 <div class="feature-detail">
-                    <p>Remove playlists you no longer need. Deleting a playlist removes the collection but not the original media files.</p>
+                    <p>Remove playlists you no longer need. Deleting a playlist removes only the collection—your original media files remain safe in your library.</p>
 
-                    <h3>How to Delete a Playlist</h3>
+                    <h3>How to Delete a Playlist Entirely</h3>
                     <ul>
-                        <li><strong>Method 1 - Right-Click:</strong> Right-click the playlist name in the sidebar and select "Delete Playlist"</li>
-                        <li><strong>Method 2 - Settings:</strong> Open the playlist and click the delete icon in the top-right corner</li>
-                        <li><strong>Method 3 - Keyboard:</strong> Select the playlist and press the Delete key</li>
+                        <li><strong>Method 1 - Context Menu:</strong> Right-click the playlist name in the sidebar and select "Delete Playlist"</li>
+                        <li><strong>Method 2 - Delete Database:</strong> For Windows, the database is located at <code>"C:\Users\yourname\AppData\Roaming\Player\Playlist.db"</code> For Debian within <code>"~/.player/playlist.db"</code></li>
                     </ul>
 
-                    <h3>Confirmation</h3>
-                    <p>A confirmation dialog will appear asking if you want to delete the playlist. This prevents accidental deletion. Click "Confirm" to proceed or "Cancel" to keep the playlist.</p>
+                    <h3>Deletion Confirmation</h3>
+                    <p>A confirmation dialog will appear asking you to confirm the deletion. This safeguard prevents accidental removal of your playlists. Click "Confirm" to proceed or "Cancel" to keep the playlist.</p>
 
                     <h3>What Happens After Deletion</h3>
                     <ul>
-                        <li>The playlist is removed from your library</li>
-                        <li>All media files in the playlist remain in your library</li>
-                        <li>Deletion is permanent and cannot be undone</li>
-                        <li>If you want to recover the playlist, you must recreate it manually</li>
+                        <li>The playlist is permanently removed from your library</li>
+                        <li>All media files that were in the playlist remain in your library</li>
+                        <li>Deletion cannot be undone</li>
+                        <li>To recover a deleted playlist, you must recreate it manually and re-add the content</li>
                     </ul>
 
-                    <h3>Important Note</h3>
-                    <p>You can also clear all tracks from a playlist without deleting it. This is useful if you want to reuse the playlist for different content. Simply select all tracks in the playlist and remove them.</p>
+                    <h3>Alternative: Clear Playlist Contents</h3>
+                    <p>If you want to keep the playlist but remove all its contents, you can do so without deleting the playlist itself:</p>
+                    <ul>
+                        <li>Double-click the playlist to expand it and view its contents</li>
+                        <li>Hover over an individual track</li>
+                        <li>Right-click and choose "Remove from Playlist"</li>
+                        <li>The playlist remains in your sidebar, empty and ready for new content</li>
+                        <li>Bulk removal of individual playlist files is not currently supported</li>
+                    </ul>
+
+                    <h3>Important Notes</h3>
+                    <ul>
+                        <li>Clearing a playlist's contents is useful when you want to repurpose it for different media</li>
+                        <li>Deleted playlists cannot be recovered through the application</li>
+                        <li>Consider exporting important playlists before deletion as a backup</li>
+                        <li>Exporting and importing playlists from the GUI is not currently supported</li>
+                    </ul>
 
                     <div class="image-placeholder">
-                        <img src="./images/delete-playlist.png" alt="Delete Playlist Confirmation" loading="lazy">
+                        <img src="./images/delete-playlist.png" alt="Delete Playlist Confirmation Dialog" loading="lazy">
                     </div>
                 </div>
             </section>
-
-            <!-- Add Playlist Section -->
-            <section id="add-playlist" class="doc-section">
+            <!-- Playlist Management Section -->
+            <section id="playlist-management" class="doc-section">
                 <h2>📌</h2>
-                <h2>Add Playlist</h2>
+                <h2>Playlist Management Overview</h2>
                 <div class="feature-detail">
-                    <p>Create new playlists to organize your media by mood, genre, or any custom category you prefer.</p>
+                    <p>Playlists are collections of media files organized according to your preferences. Manage all your playlists from the main library view.</p>
 
-                    <h3>How to Create a New Playlist</h3>
+                    <h3>Main Playlist Features</h3>
                     <ul>
-                        <li><strong>Step 1:</strong> Click the "Create Playlist" or "+" button in the Playlists section</li>
-                        <li><strong>Step 2:</strong> A dialog box will appear asking for the playlist name</li>
-                        <li><strong>Step 3:</strong> Type your desired playlist name (e.g., "Workout Mix", "Chill Vibes")</li>
-                        <li><strong>Step 4:</strong> Click "Create" to add the new playlist</li>
-                        <li><strong>Step 5:</strong> Your new playlist appears in the sidebar ready for content</li>
+                        <li><strong>View Playlists:</strong> All your playlists appear in the left sidebar under "Playlists"</li>
+                        <li><strong>Right-Click Context Menu:</strong> Right-click any playlist to access management options</li>
+                        <li><strong>Expand Playlist:</strong> Double-click a playlist to view its contents</li>
+                        <li><strong>Quick Preview:</strong> Hover over a playlist to see track count and total duration</li>
                     </ul>
 
-                    <h3>Adding Content to New Playlist</h3>
+                    <h3>Playlist Context Menu Options</h3>
+                    <p>Right-click on any playlist name in the sidebar to access these options:</p>
                     <ul>
-                        <li>Drag and drop media files from your library into the new playlist</li>
-                        <li>Right-click files and select "Add to [Playlist Name]"</li>
-                        <li>Use bulk selection to add multiple files at once</li>
+                        <li><strong>Add Files:</strong> Browse and add media files to the selected playlist</li>
+                        <li><strong>Play All:</strong> Start playing all tracks in the playlist sequentially</li>
+                        <li><strong>Sort Files:</strong> Sort the playlist within the database based on your preference</li>
+                        <li><strong>Delete Playlist:</strong> Remove the playlist from your library (media files remain intact)</li>
                     </ul>
 
-                    <h3>Rename Playlist</h3>
+                    <h3>Adding Tracks to Playlists</h3>
+                    <p>There are multiple ways to add tracks to your playlists:</p>
                     <ul>
-                        <li>Right-click the playlist name and select "Rename"</li>
-                        <li>Enter the new name and press Enter or click "Save"</li>
+                        <li><strong>From Playlist Context Menu:</strong> Right-click the playlist name and select "Add Files"</li>
+                        <li><strong>From Library View:</strong> Right-click any track in Music, Videos, or other filters and select "Add to Playlist"</li>
+                        <li><strong>Bulk Selection:</strong> In the Playlist filter, right-click then select "Add Files" to add multiple files from your system at once</li>
+                        <li><strong>File Browser:</strong> Use the "Add Files" option to browse and select media from your system</li>
                     </ul>
 
-                    <h3>Playlist Organization Tips</h3>
+                    <h3>Managing Tracks Within Playlists</h3>
+                    <p>Once you've expanded a playlist by double-clicking it:</p>
                     <ul>
-                        <li>Create playlists by genre, artist, mood, or activity</li>
-                        <li>Use descriptive names so you can find them easily</li>
-                        <li>Organize playlists into folders by right-clicking and selecting "Create Folder"</li>
-                        <li>Export playlists to share with friends (M3U, PLS, XSPF formats)</li>
+                        <li><strong>View Contents:</strong> See all tracks currently in the playlist</li>
+                        <li><strong>Remove Tracks:</strong> Right-click any track and select "Remove from Playlist"</li>
+                        <li><strong>Multiple Removals:</strong> Currently not supported</li>
+                        <li><strong>Reorder Items:</strong> Click-and-drag reordering is not supported in the context menu. You can rely on sorting by time or name instead</li>
+                    </ul>
+
+                    <h3>Important Notes</h3>
+                    <ul>
+                        <li>Removing tracks from a playlist does not delete them from your library</li>
+                        <li>You can add the same track to multiple playlists</li>
+                        <li>Playlists are saved automatically within the database until you remove them</li>
                     </ul>
 
                     <div class="image-placeholder">
-                        <img src="./images/add-playlist.png" alt="Create New Playlist" loading="lazy">
+                        <img src="./images/screenshot3.png" alt="Playlist Management Interface" loading="lazy">
                     </div>
                 </div>
             </section>
-
             <!-- Opening Files Section -->
             <section id="open-files" class="doc-section">
                 <h2>📌</h2>
                 <h2>Opening Files</h2>
                 <div class="feature-detail">
-                    <p>Learn the various ways to open and play media files in 4allMedia Player.</p>
+                    <p>Opening files is what makes 4allMedia Player truly special. The player offers more than 8 different methods to open and play your media files, providing maximum flexibility and convenience.</p>
 
                     <h3>Ways to Open Files</h3>
                     <ul>
-                        <li><strong>From Library:</strong> Double-click any file in your library to start playing</li>
-                        <li><strong>File Browser:</strong> Click "Open File" button and browse your computer</li>
-                        <li><strong>Drag & Drop:</strong> Drag media files directly onto the player window</li>
-                        <li><strong>Context Menu:</strong> Right-click a file in your system and select "Open with 4allMedia"</li>
-                        <li><strong>Keyboard Shortcut:</strong> Press Ctrl+O (Windows/Linux) or Cmd+O (Mac) to open file dialog</li>
+                        <li><strong>From Library Panel:</strong> Browse your scanned folders in the left panel and double-click any file to start playing. You can also use the search function to find specific media</li>
+                        <li><strong>AI-Assisted Search:</strong> Ask the AI assistant to search for and play media files for you</li>
+                        <li><strong>System File Association:</strong> Open media files directly from your system by selecting 4allMedia Player as the default application</li>
+                        <li><strong>Direct File Browser:</strong> Right-click on the player to access your system files, USB drives, or DVD content directly</li>
+                        <li><strong>Drag & Drop:</strong> Drag media files directly onto the player window when media is currently playing (not available on the welcome screen)</li>
+                        <li><strong>Recent Media:</strong> Access previously played files from the recent media section in the bottom-right corner</li>
+                        <li><strong>File Browser Button:</strong> Click the "Open File" button and browse your computer</li>
+                        <li><strong>Context Menu Shortcut:</strong> Right-click while media is playing and select "Open File" or "Open URL"</li>
                     </ul>
 
                     <h3>Opening URLs and Streams</h3>
                     <ul>
-                        <li>Click "Open URL" from the File menu</li>
-                        <li>Paste YouTube, Twitch, or HTTP stream links</li>
+                        <li>Click "Open URL" at the top of the playing media interface</li>
+                        <li>Paste YouTube, Twitch, or HTTP stream links into the URL field</li>
                         <li>Press Enter to start playback</li>
-                        <li>The player supports most streaming protocols</li>
+                        <li>The player supports most streaming protocols, thanks to the VLC backend</li>
+                        <li><strong>YouTube Direct Play:</strong> Right-click on top of any playing media, navigate to "Other," then select "YouTube" to play YouTube content directly</li>
                     </ul>
 
-                    <h3>Recently Played</h3>
+                    <h3>Recently Played Media</h3>
                     <ul>
-                        <li>Access your recently played files from the "Recent" section</li>
-                        <li>Quick resume playback where you left off</li>
-                        <li>Clear recent history from Settings if needed</li>
+                        <li>Access your recently played files from the "Recent" section in the bottom-right corner</li>
+                        <li>Quick resume: Check the playback timer and hover over it to resume from that specific timestamp</li>
+                        <li>Clear recent history: Select the hamburger menu in the bottom-right corner and click the trash button</li>
+                        <li>Note: Closing and reopening the application may clear the recent play history</li>
                     </ul>
 
                     <h3>Keyboard Shortcuts for File Operations</h3>
                     <ul>
-                        <li><strong>Ctrl+O:</strong> Open file dialog</li>
-                        <li><strong>Ctrl+L:</strong> Open URL/stream</li>
-                        <li><strong>Ctrl+Q:</strong> Quit application</li>
+                        <li><strong>Ctrl+O:</strong> Open file dialog (coming soon)</li>
+                        <li><strong>Ctrl+L:</strong> Open URL/stream (coming soon)</li>
+                        <li><strong>Ctrl+Q:</strong> Quit application (coming soon)</li>
                     </ul>
 
                     <div class="image-placeholder">
@@ -267,40 +319,106 @@
                 <h2>📌</h2>
                 <h2>Access Settings</h2>
                 <div class="feature-detail">
-                    <p>Customize 4allMedia Player to your preferences through the Settings menu. Configure appearance, playback behavior, library options, and more.</p>
+                    <p>Customize 4allMedia Player to match your preferences through the comprehensive Settings menu. Configure appearance, themes, language, library management, and technical options to create your ideal media experience.
+                        Also you can check some shortcuts here! but editing shortcuts is current not supported
+                    </p>
+                    <p><strong style="color: red;">TROUBLESHOOT:</strong> For windows "Changing media background does not work" But we are working on it.</p>
 
                     <h3>How to Open Settings</h3>
                     <ul>
-                        <li><strong>Method 1:</strong> Click the gear icon (⚙️) in the top-right corner</li>
-                        <li><strong>Method 2:</strong> Press Ctrl+, (comma) keyboard shortcut</li>
-                        <li><strong>Method 3:</strong> Go to File menu → Settings</li>
-                        <li><strong>Method 4:</strong> Right-click the player window and select "Settings"</li>
+                        <li><strong>Main Method:</strong> Click the settings filter in the top-right corner of the filter section</li>
+                        <li>The settings panel will open, displaying all available configuration options</li>
                     </ul>
 
-                    <h3>Settings Categories</h3>
+                    <h3>Available Settings Categories</h3>
+
+                    <h4>Language Settings</h4>
                     <ul>
-                        <li><strong>General:</strong> Language, startup behavior, library options</li>
-                        <li><strong>Appearance:</strong> Theme, colors, fonts, layout options</li>
-                        <li><strong>Playback:</strong> Default playback settings, equalizer presets, audio device</li>
-                        <li><strong>Advanced:</strong> Cache settings, performance options, file associations</li>
-                        <li><strong>AI & Voice:</strong> Enable/disable AI features, voice control settings</li>
-                        <li><strong>About:</strong> Version info, updates, support links</li>
+                        <li><strong>Interface Language:</strong> Select your preferred language for the player interface</li>
+                        <li>Changes apply immediately throughout the application</li>
+                        <li><strong>Add missing Language:</strong> Go to the folder where you installed the app, then navigate to the "translations" folder. Pick one of the existing translation files of your choice, translate it using a translator or AI, and save it within the folder with a custom name (such as "custom" or any name you prefer). The next time you start the app, you will find your new language available.</li>
+                        <ul>
+                            <li><strong>Step 1:</strong> For example, open or copy "en.json" and go to an AI tool like Grok, ChatGPT, or any other. Paste the content and ask: "Translate this into Bengali in JSON format"</li>
+                            <li><strong>Step 2:</strong> Once the translation is finished, copy the code. Open your text editor (search for Notepad, Text Editor, or Mousepad) and paste the code</li>
+                            <li><strong>Step 3:</strong> Press Ctrl+S or go to File then Save. Use a name like "custom.json" or "bengali.json" and save it in the "translations" folder. Done!</li>
+                        </ul>
                     </ul>
 
-                    <h3>Popular Settings to Configure</h3>
+                    <h4>Theme & Appearance</h4>
                     <ul>
-                        <li><strong>Default Theme:</strong> Choose between Dark, Light, or custom themes</li>
-                        <li><strong>Autoplay Next:</strong> Automatically play next item when current ends</li>
-                        <li><strong>Remember Position:</strong> Resume videos where you left off</li>
-                        <li><strong>Audio Device:</strong> Select output device (speakers, headphones, etc.)</li>
-                        <li><strong>Subtitle Language:</strong> Set preferred subtitle language for auto-search</li>
+                        <li><strong>Theme Name:</strong> Choose from built-in themes in the Appearance section. Click the button to view the theme mode</li>
+                        <li><strong>Theme Mode:</strong> Select between Auto, Light, Dark mode, or Custom theme</li>
+                        <li><strong>Button Accent Color:</strong> Customize the accent color for buttons and UI elements (default: #3584e4)</li>
+                        <li><strong>Background Image:</strong> Set a custom background image for the player interface</li>
+                        <li><strong>Background Enabled:</strong> Toggle custom background on/off</li>
+                        <li><strong>Custom Themes Directory:</strong> Specify a folder containing your custom CSS theme files, default one is where you installed the application at "themes"</li>
+                        <li><strong>Activating Custom Themes:</strong>
+                            <ul>
+                                <li><strong>Step 1:</strong> Click on "Custom Theme" to activate another row of buttons</li>
+                                <li><strong>Step 2:</strong> You will see a button labeled <code style="color: green;">Adwaita (GTK)</code></li>
+                                <li><strong>Step 3:</strong> Click that button and you will see <code style="color: red;">Custom Theme</code> option</li>
+                                <li><strong>Step 4:</strong> If you have defined a directory, you will find a list of your available themes</li>
+                            </ul>
+                        </li>
+                        <li><strong>Theme Sample:</strong> Click this <a href="themes.html">Themes</a> link to get samples. You can edit them to match your vibe</li>
+                        <li><code>Custom themes allow you to change the appearance of almost everything, including fonts, lyrics display, buttons (such as play/pause), animations (like how the left panel opens), and much more</code></li>
+                    </ul>
+                    <p><strong style="color: red;">TROUBLESHOOT:</strong> Theme changing from custom to system like "Light or DARK" sometimes fails, so just scroll settings to down and click <code>"Reset to Defaults"</code> Button.</p>
+                    <div class="image-placeholder">
+                        <img src="./images/theme-change.png" alt="Settings Menu Interface" loading="lazy">
+                    </div>
+                    <h4>Library & File Management</h4>
+                    <ul>
+                        <li><strong>Last Opened Folder:</strong> View the most recently accessed folder path</li>
+                        <li><strong>Recent Folders:</strong> Access your 10 most recently opened folders</li>
+                        <li><strong>Clear Recent Folders:</strong> Remove all folders from the recent list</li>
+                        <li><strong>Hidden Folders:</strong> Manage folders that should be excluded from library scanning</li>
+                        <li><strong>Add Hidden Folder:</strong> Specify folders to skip during media scanning.</li>
+                        <li><strong>Remove Hidden Folder:</strong> Remove folders from the hidden list to include them in scans.</li>
+                        <li><strong>Clear All Hidden Folders:</strong> Reset the hidden folders list.</li>
                     </ul>
 
-                    <h3>Search Settings</h3>
-                    <p>Use the search box at the top of Settings to quickly find specific options without scrolling.</p>
+                    <h4>AI Features</h4>
+                    <ul>
+                        <li><strong>AI Widget:</strong> Enable or disable the AI assistant widget.</li>
+                        <li>When enabled, you can use AI to search and play media with voice or text commands.</li>
+                    </ul>
+
+                    <h4>Technical Settings</h4>
+                    <ul>
+                        <li><strong>Media Backend:</strong> Choose between available media backends (default: VLC) Do not change if you want for AI to choose itself.</li>
+                        <li>Different backends may offer better compatibility with certain file formats</li>
+                        <li>Changing the backend may require restarting the application</li>
+                    </ul>
+
+                    <h3>Settings Management</h3>
+                    <ul>
+                        <li><strong>Auto-Save:</strong> All settings are automatically saved when changed</li>
+                        <li><strong>Settings Location:</strong> Configuration stored in ~/.player/settings.json (Linux) or similar location on your system</li>
+                        <li><strong>Reset to Defaults:</strong> Restore all settings to factory defaults if needed</li>
+                        <li><strong>Settings Validation:</strong> The player automatically validates and repairs corrupted settings files</li>
+                    </ul>
+
+                    <h3>About Information</h3>
+                    <p>The settings panel also displays application information including:</p>
+                    <ul>
+                        <li>Application name and version number</li>
+                        <li>Developer information and credits</li>
+                        <li>Feedback email for support and suggestions</li>
+                        <li>Application description and features overview</li>
+                    </ul>
+
+                    <h3>Tips for Configuring Settings</h3>
+                    <ul>
+                        <li>Use hidden folders to exclude system directories or folders with non-media files from scanning</li>
+                        <li>Custom themes must be CSS files placed in your designated custom themes directory</li>
+                        <li>Auto mode for theme automatically switches between light and dark based on system preferences</li>
+                        <li>Recent folders help you quickly return to frequently accessed media locations</li>
+                        <li>Experiment with different media backends if you experience playback issues with certain formats</li>
+                    </ul>
 
                     <div class="image-placeholder">
-                        <img src="./images/settings.png" alt="Settings Menu" loading="lazy">
+                        <img src="./images/settings.png" alt="Settings Menu Interface" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -310,43 +428,32 @@
                 <h2>📌</h2>
                 <h2>AI Widget</h2>
                 <div class="feature-detail">
-                    <p>The AI Widget is your floating control panel for voice commands, gesture recognition, and quick playback adjustments.</p>
+                    <p>The AI Widget is your floating control panel for voice commands,  and chatting, and quick settings adjustments for smooth experience.</p>
 
                     <h3>Enabling the AI Widget</h3>
                     <ul>
-                        <li>Click the AI icon in the main toolbar</li>
-                        <li>Or go to Settings → AI & Voice → Enable AI Widget</li>
-                        <li>The widget appears as a floating panel on your screen</li>
-                        <li>You can move it by dragging the header bar</li>
+                        <li>Current AI widget can be opened when you play media, Expand button navigations, and double-click AI button</li>
+                        <li>Or go to Settings → AI Features → Enable AI Widget</li>
+                        <li>The widget appears as a floating panel on your screen, But not in welcome screen</li>
+                        <li>You can open it, choose between chatting and voice! after you have done you things, click close button on very top. similar to the way you close normal app</li>
+                        <li>Current AI support only English and can do function related to playback! but discussing about movie or music not yet supported</li>
                     </ul>
 
                     <h3>AI Widget Features</h3>
                     <ul>
                         <li><strong>Voice Input:</strong> Click the microphone button and speak your command</li>
-                        <li><strong>Gesture Recognition:</strong> Enable your camera for hand gesture control</li>
+                        <li><strong>Gesture Recognition:</strong> Enable your camera for hand gesture control - coming soon</li>
                         <li><strong>Quick Controls:</strong> Fast access buttons for Play, Pause, Skip</li>
                         <li><strong>Smart Search:</strong> Ask the AI to find and play specific content</li>
                         <li><strong>Volume Control:</strong> Slide the volume bar without touching your device</li>
                     </ul>
 
-                    <h3>Voice Commands</h3>
-                    <p>Try these voice commands with the AI Widget:</p>
-                    <ul>
-                        <li>"Play my workout playlist"</li>
-                        <li>"Next track"</li>
-                        <li>"Lower the volume"</li>
-                        <li>"Find jazz music"</li>
-                        <li>"Skip this song"</li>
-                        <li>"Shuffle mode"</li>
-                    </ul>
-
                     <h3>Widget Settings</h3>
                     <ul>
-                        <li>Resize by dragging the corner</li>
+                        <li>Resize : Current it is not resizable</li>
                         <li>Minimize to taskbar when not in use</li>
-                        <li>Set transparency level for the widget</li>
-                        <li>Configure microphone sensitivity</li>
-                        <li>Enable/disable specific features</li>
+                        <li>Click again, to hide also click again to show</li>
+                        <li>Close similar to app, by looking on top of the buttons on the right</li>
                     </ul>
 
                     <div class="image-placeholder">
@@ -360,34 +467,39 @@
                 <h2>📌</h2>
                 <h2>AI Assistant</h2>
                 <div class="feature-detail">
-                    <p>Experience hands-free media control with our intelligent AI assistant. Interact naturally using voice commands or gestures.</p>
+                    <p>Experience the future of media control with our intelligent AI assistant. Interact naturally using chat commands, with voice and gesture controls coming in our next update.</p>
 
-                    <h3>Voice Control</h3>
-                    <p>Simply speak to control your media:</p>
+                    <h3>Chat Commands</h3>
+                    <p>Engage with the AI Widget using these intuitive commands:</p>
                     <ul>
-                        <li>"Play my favorite playlist"</li>
-                        <li>"Find subtitles for this movie"</li>
-                        <li>"Pause the video"</li>
-                        <li>"Skip to the next song"</li>
+                        <li><strong>Playback Control:</strong> "Play or pause this music"</li>
+                        <li><strong>Track Navigation:</strong> "Next track please" or "Previous track"</li>
+                        <li><strong>Smart Search:</strong> Use "search", "find", "look for", "locate" – Example: "Look for Rihanna"</li>
+                        <li><strong>Screen Capture:</strong> "Screenshot", "Capture", "Snap", "Take screenshot"</li>
+                        <li><strong>Subtitle Management:</strong> "Subtitle", "Caption", "SRT", "Sub"</li>
+                        <li><strong>Playback Status:</strong> "Status", "What's playing", "Current", "Now playing", "Tell me what's on"</li>
+                        <li><strong>AI Integration:</strong> "Integrate Claude", "ChatGPT", "Grok", or "Sonnet"</li>
+                        <li><strong>Greetings:</strong> "Pleased to meet you", "How are you", "Shalom", "Salam", "Bonjour", "Sawubona"</li>
+                        <li><strong>Acknowledgments:</strong> "Sure", "Fine", "Cool", "Roger that", "Copy"</li>
+                        <li><strong>Farewells:</strong> "Sayonara", "Cheerio", "Toodles", "TTYL", "Talk to you later"</li>
                     </ul>
 
-                    <h3>Gesture Control</h3>
-                    <p>Revolutionary gesture recognition allows you to control playback without touching your device:</p>
+                    <h3>Gesture Control - Coming Soon</h3>
+                    <p>Revolutionary gesture recognition technology will allow you to control playback without touching your device:</p>
                     <ul>
-                        <li><strong>👏 Clap hands:</strong> Play/Pause toggle</li>
-                        <li><strong>Wave left/right:</strong> Previous/Next track</li>
-                        <li><strong>Thumbs up/down:</strong> Like/Dislike</li>
+                        <li><strong>👏 Clap Hands:</strong> Toggle Play/Pause</li>
+                        <li><strong>Wave Left/Right:</strong> Navigate to Previous/Next track</li>
+                        <li><strong>Thumbs Up/Down:</strong> Like/Dislike content</li>
                     </ul>
 
-                    <h3>Smart Subtitle Search</h3>
-                    <p>The AI assistant automatically searches for and downloads subtitles in your preferred language. Just ask!</p>
+                    <h3>Smart Subtitle Search - Partially Supported</h3>
+                    <p>Our AI assistant intelligently searches for and downloads subtitles in your preferred language. Simply ask, and it delivers!</p>
 
                     <div class="image-placeholder">
-                        <img src="./images/ai-assistant.png" alt="AI Assistant Interface" loading="lazy">
+                        <img src="./images/screenshot2.png" alt="AI Assistant Interface" loading="lazy">
                     </div>
                 </div>
             </section>
-
             <!-- Backend Support Section -->
             <section id="backend-support" class="doc-section">
                 <h2>📌</h2>
@@ -419,10 +531,6 @@
                         <li><strong>Streaming:</strong> YouTube, Twitch, HTTP/HTTPS streams</li>
                         <li><strong>Subtitles:</strong> SRT, ASS, SSA, VTT</li>
                     </ul>
-
-                    <div class="image-placeholder">
-                        <img src="./images/formats-support.png" alt="Supported Formats" loading="lazy">
-                    </div>
                 </div>
             </section>
 
@@ -490,10 +598,11 @@
                     <p>Customize how lyrics appear:</p>
                     <ul>
                         <li>Toggle show/hide with one click</li>
-                        <li>Adjust font size and style</li>
-                        <li>Change background opacity</li>
-                        <li>Choose highlight colors</li>
+                        <li>Adjust font size and style - this come from Theme your using</li>
+                        <li>Change background opacity - This also com from the Theme your using</li>
+                        <li>Choose highlight colors - This come from Editing lyrics and click drawing bar like button</li>
                         <li>Karaoke mode with word-by-word highlighting</li>
+                        <li>Adjust timing to fit how lyrics play</li>
                     </ul>
 
                     <div class="image-placeholder">
@@ -507,40 +616,174 @@
                 <h2>📌</h2>
                 <h2>Playback Controls</h2>
                 <div class="feature-detail">
-                    <p>Complete control over your media playback experience.</p>
+                    <p>Take complete control over your media playback experience with 4allMedia Player's comprehensive control system, featuring basic and advanced playback options, context menus, and top navigation tools.</p>
 
-                    <h3>Basic Controls</h3>
-                    <div class="controls-grid">
-                        <div class="control-item">▶️ Play</div>
-                        <div class="control-item">⏸️ Pause</div>
-                        <div class="control-item">⏹️ Stop</div>
-                        <div class="control-item">⏭️ Next</div>
-                        <div class="control-item">⏮️ Previous</div>
-                    </div>
-
-                    <h3>Advanced Features</h3>
+                    <h3>Bottom Control Bar</h3>
+                    <p>The bottom control bar offers two viewing modes for different user preferences:</p>
+                    
+                    <h4>Minimalist Mode (Default)</h4>
+                    <p>By default, the control bar displays only essential controls:</p>
                     <ul>
-                        <li><strong>Shuffle:</strong> Random playback order</li>
-                        <li><strong>Repeat Modes:</strong> All, One, or Off</li>
-                        <li><strong>A-B Repeat:</strong> Loop specific sections</li>
-                        <li><strong>Playback Speed:</strong> 0.25x to 4x speed control</li>
-                        <li><strong>Equalizer:</strong> 10-band EQ with presets</li>
-                        <li><strong>Audio Boost:</strong> Enhance volume up to 200%</li>
-                        <li><strong>Video Filters:</strong> Brightness, contrast, saturation</li>
+                        <li><strong>Play/Pause Button:</strong> Toggle playback with a single click</li>
+                        <li><strong>Progress Bar:</strong> Visual timeline with hover preview showing time stamps</li>
+                        <li><strong>Volume Control:</strong> Adjust audio level</li>
+                        <li><strong>Toggle Button:</strong> Show or hide extended controls</li>
+                        <li><strong>Hamburger Menu:</strong> Access recently played files</li>
+                    </ul>
+
+                    <h4>Extended Controls Mode</h4>
+                    <p>Click the toggle button to reveal additional playback controls:</p>
+                    
+                    <p><strong>Basic Playback Buttons:</strong></p>
+                    <ul>
+                        <li>▶️ <strong>Play:</strong> Start media playback</li>
+                        <li>⏸️ <strong>Pause:</strong> Pause current media</li>
+                        <li>⏹️ <strong>Stop:</strong> Stop playback completely</li>
+                        <li>⏭️ <strong>Next:</strong> Skip to next track in playlist</li>
+                        <li>⏮️ <strong>Previous:</strong> Go back to previous track</li>
+                    </ul>
+
+                    <h3>Advanced Control Buttons (Extended Mode)</h3>
+                    <p>When you toggle to extended mode, additional control buttons appear providing quick access to advanced features:</p>
+                    <ul>
+                        <li><strong>Shuffle Button:</strong> Randomize playback order for variety</li>
+                        <li><strong>Repeat Button:</strong> Cycle through Repeat All, Repeat One, or Repeat Off modes</li>
+                        <li><strong>A-B Repeat Button:</strong> Loop specific sections of media for practice or review</li>
+                        <li><strong>AR (Aspect Ratio) Button:</strong> Quickly change video aspect ratio</li>
+                        <li><strong>Fullscreen Button:</strong> Toggle fullscreen mode on/off</li>
+                        <li><strong>Picture-in-Picture Button:</strong> Enable mini player mode</li>
+                        <li><strong>Equalizer Button:</strong> Open 10-band EQ with preset options for customized audio</li>
+                        <li><strong>AI Button:</strong> Access AI assistant features</li>
+                        <li><strong>Volume Button:</strong> Fine-tune audio levels and access audio boost (up to 100%; Ultra Boost 200% coming soon)</li>
+                        <li><strong>Subtitle Button:</strong> Load and configure subtitle files</li>
+                    </ul>
+                    
+                    <p>These buttons provide instant access to commonly used features without opening menus, streamlining your playback experience.</p>
+
+                    <h3>Playing Area - Right-Click Context Menu</h3>
+                    <p>Right-click anywhere on the playing media area to access a comprehensive context menu with advanced features:</p>
+
+                    <h4>File Operations</h4>
+                    <ul>
+                        <li><strong>Open File:</strong> Browse and open media files from your system</li>
+                        <li><strong>Open URL:</strong> Play streams and online media by pasting URLs</li>
+                    </ul>
+
+                    <h4>Audio Menu</h4>
+                    <ul>
+                        <li><strong>Audio Track:</strong> Select from multiple audio tracks in the media file</li>
+                        <li><strong>Audio Visualization:</strong> Toggle visual effects synchronized with audio</li>
+                        <li><strong>Audio Device:</strong> Choose your output device (speakers, headphones, etc.)</li>
+                        <li><strong>Lyrics Overlay:</strong> Display synchronized lyrics (coming soon)</li>
+                        <li><strong>Stereo Mode:</strong> Choose from Stereo, Mono, Left Only, Right Only, or Reverse Stereo</li>
+                    </ul>
+
+                    <h4>Video Menu</h4>
+                    <ul>
+                        <li><strong>Video Track:</strong> Select from multiple video tracks</li>
+                        <li><strong>Zoom:</strong> Adjust video size (0.5x, 1x, 1.5x, 2x)</li>
+                        <li><strong>Screen Rotation:</strong> Rotate video by 0°, 90°, 180°, or 270°</li>
+                        <li><strong>Crop Ratios:</strong> Select from multiple aspect ratios including:
+                            <ul>
+                                <li>Standard formats: 16:10, 16:9, 4:3, 5:4, 1:1</li>
+                                <li>Cinematic formats: 1.85:1, 2.21:1, 2.35:1, 2.39:1</li>
+                            </ul>
+                        </li>
+                        <li><strong>Deinterlace:</strong> Toggle deinterlacing for better video quality</li>
+                        <li><strong>Deinterlace Modes:</strong> Choose from Discard, Blend, Mean, Bob, Linear, X, Yadif, or Yadif (2x)</li>
+                    </ul>
+
+                    <h4>Playback Menu</h4>
+                    <ul>
+                        <li><strong>Speed Control:</strong> Precise playback speed adjustment
+                            <ul>
+                                <li>Super Slow (0.25x), Slow (0.5x), Normal (1.0x)</li>
+                                <li>Fast (1.5x), Super Fast (2.0x), Ultra Fast (3.0x)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Chapters:</strong> View and navigate chapter markers in the media</li>
+                        <li><strong>Next/Previous Chapter:</strong> Quick chapter navigation</li>
+                        <li><strong>Jump to Time:</strong> Seek to a specific timestamp</li>
+                        <li><strong>Render:</strong> Export or render media segments</li>
+                        <li><strong>Record:</strong> Capture live playback</li>
+                        <li><strong>Bookmarks:</strong> Manage saved positions in your media</li>
+                    </ul>
+
+                    <h4>Other Menu</h4>
+                    <ul>
+                        <li><strong>Play YouTube Video:</strong> Direct YouTube playback support</li>
+                        <li><strong>Add URL:</strong> Add streaming URLs to your playlist</li>
+                        <li><strong>VR Mode:</strong> Enable VR glasses support for immersive viewing</li>
+                        <li><strong>Play 360° Video:</strong> Activate 3D/VR mode for 360-degree videos</li>
+                        <li><strong>Play Blu-ray Disk:</strong> Direct Blu-ray disc playback</li>
+                        <li><strong>Media Backend:</strong> Switch between GStreamer, MPV, or VLC backends for optimal compatibility</li>
+                    </ul>
+
+                    <h3>Top Navigation Bar</h3>
+                    <p>The top navigation bar provides quick access to essential functions and information:</p>
+                    <ul>
+                        <li><strong>Back Button:</strong> Exit playback and return to library view</li>
+                        <li><strong>Stats Button:</strong> View detailed statistics of your viewing activity and media info</li>
+                        <li><strong>H Button:</strong> Hide/show the left panel during playback for quick access to your library without leaving the player</li>
+                        <li><strong>File Name Display:</strong> Shows the currently playing media file name</li>
+                        <li><strong>Information Button:</strong> View detailed media properties including file size, audio codec, video codec, resolution, frame rate, bitrate, and more</li>
+                        <li><strong>Screenshot Button:</strong> Capture still images from video playback (not available for audio-only files)</li>
+                        <li><strong>T Button:</strong> Toggle visibility of the top navigation bar; automatically hides after 5 seconds during video playback for an immersive viewing experience</li>
                     </ul>
 
                     <div class="image-placeholder">
-                        <img src="./images/playback-controls.png" alt="Playback Controls" loading="lazy">
+                        <img src="./images/playback-controls.png" alt="Playback Controls Interface" loading="lazy">
                     </div>
 
                     <h3>Keyboard Shortcuts</h3>
-                    <p>Master efficient playback with keyboard shortcuts:</p>
+                    <p>Master efficient playback control with these keyboard shortcuts:</p>
+                    
+                    <h4>Playback Controls</h4>
                     <ul>
-                        <li><strong>Space:</strong> Play/Pause</li>
-                        <li><strong>→/←:</strong> Seek forward/backward 5s</li>
-                        <li><strong>↑/↓:</strong> Volume up/down</li>
-                        <li><strong>F:</strong> Fullscreen</li>
-                        <li><strong>M:</strong> Mute</li>
+                        <li><strong>Space / P:</strong> Play/Pause toggle</li>
+                        <li><strong>X:</strong> Stop playback</li>
+                        <li><strong>N:</strong> Next track</li>
+                        <li><strong>B:</strong> Previous track</li>
+                    </ul>
+
+                    <h4>Volume Controls</h4>
+                    <ul>
+                        <li><strong>↑ (Up Arrow):</strong> Increase volume</li>
+                        <li><strong>↓ (Down Arrow):</strong> Decrease volume</li>
+                        <li><strong>M:</strong> Mute/unmute audio</li>
+                    </ul>
+
+                    <h4>Seeking Controls</h4>
+                    <ul>
+                        <li><strong>→ (Right Arrow):</strong> Seek forward</li>
+                        <li><strong>← (Left Arrow):</strong> Seek backward</li>
+                    </ul>
+
+                    <h4>Feature Shortcuts</h4>
+                    <ul>
+                        <li><strong>S:</strong> Toggle shuffle mode</li>
+                        <li><strong>R:</strong> Toggle repeat mode</li>
+                        <li><strong>Z:</strong> Change aspect ratio</li>
+                        <li><strong>C:</strong> Toggle subtitles</li>
+                    </ul>
+
+                    <h4>Interface Controls</h4>
+                    <ul>
+                        <li><strong>H:</strong> Toggle left panel visibility</li>
+                        <li><strong>T:</strong> Toggle top navigation bar</li>
+                        <li><strong>A:</strong> Open AI assistant</li>
+                        <li><strong>Escape:</strong> Exit fullscreen or close dialogs</li>
+                    </ul>
+
+                    <h3>Tips for Optimal Playback Experience</h3>
+                    <ul>
+                        <li>Use minimalist mode for a clean, distraction-free viewing experience</li>
+                        <li>Right-click context menu provides fastest access to advanced features</li>
+                        <li>Top navigation bar auto-hides to maximize screen space during playback</li>
+                        <li>Switch media backends if you experience compatibility issues with certain formats</li>
+                        <li>Use keyboard shortcuts to control playback without interrupting your viewing</li>
+                        <li>Enable deinterlacing for better quality when playing older or interlaced video content</li>
+                        <li>Video will automatically fit to screen when the buttons autohide for better experience</li>
                     </ul>
                 </div>
             </section>
